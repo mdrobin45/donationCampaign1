@@ -1,4 +1,4 @@
-const Donations = () => {
+const Donation = () => {
    return (
       <div>
          <h1>Donation Page</h1>
@@ -6,4 +6,4 @@ const Donations = () => {
    );
 };
 
-export default Donations;
+export default Donation;
