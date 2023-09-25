@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import useTitle from "../../../hooks/useTitle";
+import { saveDonationInStorage } from "../../../localStorage/localStorage";
 
 const SingleDonation = () => {
    const { id } = useParams();
@@ -17,6 +18,9 @@ const SingleDonation = () => {
                style={{ backgroundColor: "rgba(11, 11, 11, 0.50)" }}
                className=" absolute bottom-0 w-full py-4 px-5">
                <button
+                  onClick={() => {
+                     saveDonationInStorage(id);
+                  }}
                   style={{ backgroundColor: text_color }}
                   className="py-3 px-4 text-white rounded-md">
                   Donate ${price}
