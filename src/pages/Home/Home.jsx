@@ -1,7 +1,9 @@
+import DonationCauses from "../../components/Home/DonationCauses/DonationCauses";
+
 const Home = () => {
    return (
       <div>
-         <h1>Home Page</h1>
+         <DonationCauses />
       </div>
    );
 };
