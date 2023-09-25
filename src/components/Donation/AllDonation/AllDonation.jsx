@@ -1,19 +1,9 @@
-import { useLoaderData } from "react-router-dom";
-import { getSavedDonation } from "../../../localStorage/localStorage";
 import DonationCard from "./DonationCard";
 
-const AllDonation = () => {
-   const savedDonationIds = getSavedDonation();
-   const allCauses = useLoaderData();
-
-   const matchedDonations = allCauses.filter((cause) => {
-      return savedDonationIds.some((id) => {
-         return cause.id === parseFloat(id);
-      });
-   });
+const AllDonation = ({ initialDonations }) => {
    return (
       <>
-         {matchedDonations.map((donation) => (
+         {initialDonations.map((donation) => (
             <DonationCard donation={donation} key={donation.id} />
          ))}
       </>
