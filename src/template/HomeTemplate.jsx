@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
-import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import HeroSection from "../components/Home/HeroSection/HeroSection";
 
@@ -27,8 +26,6 @@ const HomeTemplate = () => {
                <div className="px-16">
                   <Outlet />
                </div>
-
-               <Footer />
             </div>
          )}
       </>

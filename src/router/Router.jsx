@@ -18,6 +18,8 @@ const router = createBrowserRouter([
          {
             path: "/donation",
             element: <Donation />,
+            loader: () =>
+               fetch("https://mdrobin45.github.io/api/donations.json"),
          },
          {
             path: "/statistics",
