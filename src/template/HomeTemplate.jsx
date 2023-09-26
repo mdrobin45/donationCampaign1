@@ -10,6 +10,7 @@ const HomeTemplate = () => {
    const { pathname } = useLocation();
    const [isLoading, setIsLoading] = useState(true);
    const [fetchData, setFetchData] = useState([]);
+   const [searchText, setSearchText] = useState("");
 
    // set loading timer
    setTimeout(() => {
@@ -22,8 +23,6 @@ const HomeTemplate = () => {
          .then((res) => res.json())
          .then((data) => setFetchData(data));
    }, []);
-
-   const [searchText, setSearchText] = useState("");
 
    // handle search button click
    const searchBtn = (string) => {
