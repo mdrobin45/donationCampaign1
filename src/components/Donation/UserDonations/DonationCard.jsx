@@ -22,7 +22,7 @@ const DonationCard = ({ donation }) => {
                alt={title}
             />
          </div>
-         <div className="flex flex-wrap">
+         <div className="flex flex-wrap pb-4 md:pb-0">
             <div className="p-4 justify-center flex-col h-full sm:p-7">
                <span
                   style={{ color: text_color, backgroundColor: category_bg }}

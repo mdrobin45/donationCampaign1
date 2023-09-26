@@ -6,7 +6,7 @@ const Menu = ({ isExpand }) => {
       <div
          className={`${
             isExpand
-               ? "w-full md:block md:w-auto"
+               ? "w-full bg-white md:block md:w-auto"
                : "hidden w-full md:block md:w-auto"
          }`}
          id="navbar-default">
