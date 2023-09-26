@@ -6,7 +6,9 @@ const NotFound = () => {
    return (
       <div className="flex items-center justify-center flex-col">
          <img className=" w-4/5" src="/public/page-not-found.svg" />
-         <Link to="/">Back to home</Link>
+         <Link className="text-blue-600" to="/">
+            Back to home
+         </Link>
       </div>
    );
 };

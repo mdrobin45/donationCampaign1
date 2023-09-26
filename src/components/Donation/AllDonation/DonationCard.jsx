@@ -15,7 +15,7 @@ const DonationCard = ({ donation }) => {
       <div
          style={{ backgroundColor: card_bg }}
          className="border rounded-xl items-center justify-betweem shadow-sm sm:flex dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-         <div className="flex-shrink-0 relative w-1/2 rounded-t-xl overflow-hidden pt-[40%] sm:rounded-l-xl sm:max-w-[15rem] md:rounded-tr-none md:max-w-xs">
+         <div className="flex-shrink-0 relative w-full lg:w-1/2 rounded-t-xl overflow-hidden pt-[40%] sm:rounded-l-xl sm:max-w-[15rem] md:rounded-tr-none md:max-w-xs">
             <img
                className="w-full h-full absolute top-0 left-0 object-cover"
                src={image}

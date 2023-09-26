@@ -33,7 +33,7 @@ const Donation = () => {
    }, [index, matchedDonations]);
    return (
       <>
-         <div className="grid grid-cols-2 gap-6 my-20">
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-20">
             <AllDonation initialDonations={initialDonations} />
          </div>
          {isBtnShow ? <SeeAllButton seeMoreHandler={seeMoreHandler} /> : ""}

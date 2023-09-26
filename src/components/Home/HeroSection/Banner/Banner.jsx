@@ -10,7 +10,7 @@ const Banner = () => {
       setSearchText(e.target.value);
    };
    return (
-      <div className="text-center w-2/4 mx-auto pt-20 pb-48">
+      <div className="text-center lg:w-2/4 px-6 lg:px-0 mx-auto pt-20 pb-48">
          <h2 className="text-3xl font-bold py-6">
             I Grow By Helping People In Need
          </h2>

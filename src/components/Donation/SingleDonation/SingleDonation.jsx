@@ -13,7 +13,7 @@ const SingleDonation = () => {
    const { image, title, description, text_color, price } = findSelectedCause;
    useTitle(title);
    return (
-      <div className=" w-4/5 mx-auto my-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className=" ld:w-4/5 mx-auto my-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
          <div className="relative">
             <img className="rounded-t-lg" src={image} alt={title} />
             <div

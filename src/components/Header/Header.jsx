@@ -9,7 +9,7 @@ const Header = () => {
       setIsExpand(!isExpand);
    };
    return (
-      <nav className="px-16 bg-transparent border-gray-200 dark:bg-gray-900">
+      <nav className="lg:px-16 bg-transparent border-gray-200 dark:bg-gray-900">
          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Logo />
             <Hamburger handleHamburger={showMobileMenu} />
