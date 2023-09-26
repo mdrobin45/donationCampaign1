@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import AllDonation from "../../components/Donation/AllDonation/AllDonation";
 import SeeAllButton from "../../components/Donation/SeeAllButton/SeeAllButton";
+import UserDonations from "../../components/Donation/UserDonations/UserDonations";
 import EmptyPage from "../../components/EmptyPage/EmptyPage";
 import useTitle from "../../hooks/useTitle";
 import { getSavedDonation } from "../../localStorage/localStorage";
@@ -36,7 +36,7 @@ const Donation = () => {
       <>
          {initialDonations.length ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-20">
-               <AllDonation initialDonations={initialDonations} />
+               <UserDonations initialDonations={initialDonations} />
             </div>
          ) : (
             <EmptyPage />

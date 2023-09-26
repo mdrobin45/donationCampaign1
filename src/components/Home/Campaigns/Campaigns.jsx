@@ -1,16 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 import { SearchText } from "../../../myContext/SearchText";
 import { FetchData } from "../../../myContext/fetchData";
-import CausesCard from "./CausesCard";
+import CampaignCard from "./CampaignCard";
 
-const DonationCauses = () => {
-   const fetchedDonationData = useContext(FetchData);
+const Campaigns = () => {
+   const fetchedCampaigns = useContext(FetchData);
    const { searchText } = useContext(SearchText);
    const [isSearched, setIsSearched] = useState(false);
 
    // Filter data by user searching
-   const filteredData = fetchedDonationData.filter(
-      (data) => data.category.toLowerCase() === searchText.toLowerCase()
+   const filteredData = fetchedCampaigns.filter(
+      (campaign) => campaign.category.toLowerCase() === searchText.toLowerCase()
    );
 
    useEffect(() => {
@@ -24,14 +24,14 @@ const DonationCauses = () => {
    return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
          {isSearched
-            ? filteredData.map((cause) => (
-                 <CausesCard key={cause.id} cause={cause} />
+            ? filteredData.map((campaign) => (
+                 <CampaignCard key={campaign.id} campaign={campaign} />
               ))
-            : fetchedDonationData.map((cause) => (
-                 <CausesCard key={cause.id} cause={cause} />
+            : fetchedCampaigns.map((campaign) => (
+                 <CampaignCard key={campaign.id} campaign={campaign} />
               ))}
       </div>
    );
 };
 
-export default DonationCauses;
+export default Campaigns;

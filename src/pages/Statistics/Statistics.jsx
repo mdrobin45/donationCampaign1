@@ -7,16 +7,16 @@ import { FetchData } from "../../myContext/fetchData";
 const Statistics = () => {
    useTitle("Statistics");
    // Get necessary chart data
-   const fetchedDonationData = useContext(FetchData);
+   const fetchedCampaigns = useContext(FetchData);
    const savedDonation = getSavedDonation();
 
-   const numberOfTotalDonation = fetchedDonationData.length;
+   const numberOfTotalCampaigns = fetchedCampaigns.length;
    const numberOfUserDonation = savedDonation.length;
 
    // Set chart Data
    const data = [
       ["Donation", "Donation Statistics"],
-      ["Total Donation", numberOfTotalDonation - numberOfUserDonation],
+      ["Total Donation", numberOfTotalCampaigns - numberOfUserDonation],
       ["Your Donation", numberOfUserDonation],
    ];
 

@@ -1,6 +1,6 @@
 import DonationCard from "./DonationCard";
 
-const AllDonation = ({ initialDonations }) => {
+const UserDonations = ({ initialDonations }) => {
    return (
       <>
          {initialDonations.map((donation) => (
@@ -10,4 +10,4 @@ const AllDonation = ({ initialDonations }) => {
    );
 };
 
-export default AllDonation;
+export default UserDonations;

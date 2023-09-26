@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import SingleDonation from "../components/Donation/SingleDonation/SingleDonation";
+import SingleCampaign from "../components/SingleCampaign/SingleCampaign";
 import Donation from "../pages/Donation/Donation";
 import Home from "../pages/Home/Home";
 import NotFound from "../pages/NotFound/NotFound";
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
          },
          {
             path: "/:id",
-            element: <SingleDonation />,
+            element: <SingleCampaign />,
          },
       ],
    },

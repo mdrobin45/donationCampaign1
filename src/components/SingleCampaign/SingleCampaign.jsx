@@ -1,16 +1,18 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import useTitle from "../../../hooks/useTitle";
-import { saveDonationInStorage } from "../../../localStorage/localStorage";
-import { FetchData } from "../../../myContext/fetchData";
+import useTitle from "../../hooks/useTitle";
+import { saveDonationInStorage } from "../../localStorage/localStorage";
+import { FetchData } from "../../myContext/fetchData";
 
-const SingleDonation = () => {
+const SingleCampaign = () => {
    const { id } = useParams();
-   const fetchedDonationData = useContext(FetchData);
-   const findSelectedCause = fetchedDonationData.find(
-      (cause) => cause.id === parseFloat(id)
+   const campaigns = useContext(FetchData);
+   const findSelectedCampaign = campaigns.find(
+      (campaign) => campaign.id === parseFloat(id)
    );
-   const { image, title, description, text_color, price } = findSelectedCause;
+
+   const { image, title, description, text_color, price } =
+      findSelectedCampaign;
    useTitle(title);
    return (
       <div className=" ld:w-4/5 mx-auto my-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -42,4 +44,4 @@ const SingleDonation = () => {
    );
 };
 
-export default SingleDonation;
+export default SingleCampaign;

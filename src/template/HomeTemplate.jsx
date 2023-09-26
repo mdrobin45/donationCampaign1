@@ -16,7 +16,7 @@ const HomeTemplate = () => {
       setIsLoading(false);
    }, 1000);
 
-   // Fetch donation data
+   // Fetch campaigns
    useEffect(() => {
       fetch("https://mdrobin45.github.io/api/donations.json")
          .then((res) => res.json())
@@ -41,7 +41,7 @@ const HomeTemplate = () => {
                   <div>
                      {pathname === "/" ? <HeroSection /> : <Header />}
 
-                     <div className="px-16">
+                     <div className="px-4 md:px-7 lg:px-16">
                         <Outlet />
                      </div>
                   </div>
