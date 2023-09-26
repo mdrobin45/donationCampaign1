@@ -5,9 +5,10 @@ import useTitle from "../../hooks/useTitle";
 const NotFound = () => {
    useTitle("404 - Page not found!");
    return (
-      <div className="flex items-center justify-center flex-col">
-         <img className=" w-4/5" src={notFoundImage} />
-         <Link className="text-blue-600" to="/">
+      <div className="flex h-[80vh] items-center justify-center flex-col">
+         <img className=" w-2/4" src={notFoundImage} />
+         <p className="text-gray-800 mb-4 text-lg">Oops!.. Page not found</p>
+         <Link className="text-white py-4 px-6 rounded-md bg-orange-600" to="/">
             Back to home
          </Link>
       </div>

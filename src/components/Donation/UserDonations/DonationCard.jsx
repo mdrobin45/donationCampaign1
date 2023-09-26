@@ -38,7 +38,7 @@ const DonationCard = ({ donation }) => {
                   ${price}
                </p>
                <Link
-                  to={`/${id}`}
+                  to={`/campaign/${id}`}
                   style={{ backgroundColor: text_color }}
                   className="py-4 rounded-md px-6 inline text-white">
                   View Details

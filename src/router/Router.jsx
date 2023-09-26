@@ -24,7 +24,7 @@ const router = createBrowserRouter([
             element: <Statistics />,
          },
          {
-            path: "/:id",
+            path: "/campaign/:id",
             element: <SingleCampaign />,
          },
       ],
