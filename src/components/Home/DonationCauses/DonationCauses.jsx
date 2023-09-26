@@ -1,13 +1,35 @@
-import { useLoaderData } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { SearchText } from "../../../myContext/SearchText";
+import { FetchData } from "../../../myContext/fetchData";
 import CausesCard from "./CausesCard";
 
 const DonationCauses = () => {
-   const allCauses = useLoaderData();
+   const fetchedDonationData = useContext(FetchData);
+   const { searchText } = useContext(SearchText);
+   const [isSearched, setIsSearched] = useState(false);
+
+   // Filter data by user searching
+   const filteredData = fetchedDonationData.filter(
+      (data) => data.category.toLowerCase() === searchText.toLowerCase()
+   );
+
+   useEffect(() => {
+      if (filteredData.length) {
+         setIsSearched(true);
+      } else {
+         setIsSearched(false);
+      }
+   }, [filteredData]);
+
    return (
       <div className="grid grid-cols-4 gap-6 my-10">
-         {allCauses.map((cause) => (
-            <CausesCard key={cause.id} cause={cause} />
-         ))}
+         {isSearched
+            ? filteredData.map((cause) => (
+                 <CausesCard key={cause.id} cause={cause} />
+              ))
+            : fetchedDonationData.map((cause) => (
+                 <CausesCard key={cause.id} cause={cause} />
+              ))}
       </div>
    );
 };

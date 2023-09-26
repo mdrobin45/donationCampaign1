@@ -1,4 +1,14 @@
+import { useContext, useState } from "react";
+import { SearchText } from "../../../../myContext/SearchText";
+
 const Banner = () => {
+   const { searchBtn } = useContext(SearchText);
+   const [searchText, setSearchText] = useState("");
+
+   // input handler
+   const inputHandler = (e) => {
+      setSearchText(e.target.value);
+   };
    return (
       <div className="text-center w-2/4 mx-auto pt-20 pb-48">
          <h2 className="text-3xl font-bold py-6">
@@ -27,13 +37,17 @@ const Banner = () => {
                </svg>
             </div>
             <input
+               onChange={inputHandler}
                type="search"
                id="default-search"
                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-               placeholder="Search here..."
+               placeholder="Search by category..."
                required
             />
             <button
+               onClick={() => {
+                  searchBtn(searchText);
+               }}
                type="submit"
                className="text-white absolute right-2.5 bottom-2.5 bg-[#FF444A] hover:bg-[#e03c41] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                Search

@@ -1,11 +1,13 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
 import useTitle from "../../../hooks/useTitle";
 import { saveDonationInStorage } from "../../../localStorage/localStorage";
+import { FetchData } from "../../../myContext/fetchData";
 
 const SingleDonation = () => {
    const { id } = useParams();
-   const allCauses = useLoaderData();
-   const findSelectedCause = allCauses.find(
+   const fetchedDonationData = useContext(FetchData);
+   const findSelectedCause = fetchedDonationData.find(
       (cause) => cause.id === parseFloat(id)
    );
    const { image, title, description, text_color, price } = findSelectedCause;

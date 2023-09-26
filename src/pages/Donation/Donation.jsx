@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 import AllDonation from "../../components/Donation/AllDonation/AllDonation";
 import SeeAllButton from "../../components/Donation/SeeAllButton/SeeAllButton";
 import useTitle from "../../hooks/useTitle";
 import { getSavedDonation } from "../../localStorage/localStorage";
+import { FetchData } from "../../myContext/fetchData";
 
 const Donation = () => {
    useTitle("Donations");
    const [index, setIndex] = useState(4);
    const [isBtnShow, setIsBtnShow] = useState(true);
    const savedDonationIds = getSavedDonation();
-   const allCauses = useLoaderData();
+   const fetchedDonationData = useContext(FetchData);
 
-   const matchedDonations = allCauses.filter((cause) => {
+   const matchedDonations = fetchedDonationData.filter((cause) => {
       return savedDonationIds.some((id) => {
          return cause.id === parseFloat(id);
       });
