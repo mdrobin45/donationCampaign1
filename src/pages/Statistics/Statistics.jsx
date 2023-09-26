@@ -13,9 +13,6 @@ const Statistics = () => {
    const numberOfTotalDonation = fetchedDonationData.length;
    const numberOfUserDonation = savedDonation.length;
 
-   console.log(numberOfTotalDonation);
-   console.log(numberOfUserDonation);
-
    // Set chart Data
    const data = [
       ["Donation", "Donation Statistics"],

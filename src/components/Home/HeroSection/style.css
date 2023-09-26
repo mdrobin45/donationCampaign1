@@ -4,7 +4,7 @@
          rgba(255, 255, 255, 0.93),
          rgba(255, 255, 255, 0.93)
       ),
-      url("/public/banner-bg.webp");
+      url("/public/images/banner.png");
    background-position: center center;
    background-repeat: no-repeat;
    background-size: cover;

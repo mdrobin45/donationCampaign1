@@ -14,7 +14,7 @@ const HomeTemplate = () => {
    // set loading timer
    setTimeout(() => {
       setIsLoading(false);
-   }, 1500);
+   }, 1000);
 
    // Fetch donation data
    useEffect(() => {

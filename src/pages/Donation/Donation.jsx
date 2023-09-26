@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import AllDonation from "../../components/Donation/AllDonation/AllDonation";
 import SeeAllButton from "../../components/Donation/SeeAllButton/SeeAllButton";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 import useTitle from "../../hooks/useTitle";
 import { getSavedDonation } from "../../localStorage/localStorage";
 import { FetchData } from "../../myContext/fetchData";
@@ -33,9 +34,14 @@ const Donation = () => {
    }, [index, matchedDonations]);
    return (
       <>
-         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-20">
-            <AllDonation initialDonations={initialDonations} />
-         </div>
+         {initialDonations.length ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-20">
+               <AllDonation initialDonations={initialDonations} />
+            </div>
+         ) : (
+            <EmptyPage />
+         )}
+
          {isBtnShow ? <SeeAllButton seeMoreHandler={seeMoreHandler} /> : ""}
       </>
    );

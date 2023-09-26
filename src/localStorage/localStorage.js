@@ -21,18 +21,18 @@ const saveDonationInStorage = (id) => {
 
       // Show sweet alert message
       Swal.fire({
-         position: "center-center",
+         position: "center",
          icon: "success",
-         title: "Thanks for your donation!",
+         title: "Donation Successful!",
          showConfirmButton: false,
          timer: 1500,
       });
    } else {
       // Show sweet alert message
       Swal.fire({
-         position: "center-center",
+         position: "center",
          icon: "error",
-         title: "Already donated!",
+         title: "Already exist! Try Another",
          showConfirmButton: false,
          timer: 1000,
       });
