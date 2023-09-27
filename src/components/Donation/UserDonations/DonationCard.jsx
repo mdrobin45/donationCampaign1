@@ -14,7 +14,7 @@ const DonationCard = ({ donation }) => {
    return (
       <div
          style={{ backgroundColor: card_bg }}
-         className="border rounded-xl items-center justify-betweem shadow-sm sm:flex dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+         className="border rounded-xl items-center justify-betweem shadow-sm sm:flex">
          <div className="flex-shrink-0 relative w-full lg:w-1/2 rounded-t-xl overflow-hidden pt-[40%] sm:rounded-l-xl sm:max-w-[15rem] md:rounded-tr-none md:max-w-xs">
             <img
                className="w-full h-full absolute top-0 left-0 object-cover"
@@ -26,15 +26,11 @@ const DonationCard = ({ donation }) => {
             <div className="p-4 justify-center flex-col h-full sm:p-7">
                <span
                   style={{ color: text_color, backgroundColor: category_bg }}
-                  className="text-xs inline-block font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                  className="text-xs inline-block font-medium mr-2 px-2.5 py-0.5 rounded">
                   {category}
                </span>
-               <h3 className="text-lg font-bold text-gray-800 dark:text-white">
-                  {title}
-               </h3>
-               <p
-                  style={{ color: text_color }}
-                  className="mt-1 mb-7 dark:text-gray-400">
+               <h3 className="text-lg font-bold text-gray-800">{title}</h3>
+               <p style={{ color: text_color }} className="mt-1 mb-7">
                   ${price}
                </p>
                <Link

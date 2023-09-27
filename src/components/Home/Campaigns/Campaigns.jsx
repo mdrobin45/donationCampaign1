@@ -43,7 +43,7 @@ const Campaigns = () => {
             </div>
          ) : (
             <div>
-               <h2 className="text-4xl font-bold text-center mt-20">
+               <h2 className="text-4xl text-gray-500 font-bold text-center mt-20">
                   No data found
                </h2>
             </div>
