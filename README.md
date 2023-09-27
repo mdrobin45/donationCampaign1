@@ -19,7 +19,7 @@ This website is dedicated to making a positive impact on the lives of children i
 
 ## Live Link
 
-https://assignment-8-robin45r.netlify.app/
+https://assignment8-robin45r.netlify.app/
 
 ## Lessons I Learned
 
